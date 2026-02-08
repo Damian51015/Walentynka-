@@ -134,23 +134,37 @@
     ["mouseenter","pointerenter","pointerdown","touchstart","click"]
       .forEach(ev => noBtn.addEventListener(ev, moveNo, { passive:false }));
 
-    yesBtn.addEventListener("click", () => {
-      document.body.innerHTML = `
-        <div style="
-          height:100vh;
-          display:grid;
-          place-items:center;
-          text-align:center;
-          font-family:Arial;
-          background:linear-gradient(135deg,#ffb3c6,#ffd6e8);">
-          <div>
-            <div style="font-size:48px;">❤️ Udało się! ❤️</div>
-            <p style="font-size:22px; margin-top:12px;">
-              Super… zaraz przedyskutujemy co dalej 😏☕
-            </p>
-          </div>
-        </div>`;
-    });
+yesBtn.addEventListener("click", () => {
+  document.body.innerHTML = `
+    <div style="
+      height:100vh;
+      width:100%;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      font-family:Arial, sans-serif;
+      background:linear-gradient(135deg,#ffb3c6,#ffd6e8);
+      padding:20px;
+    ">
+      <div>
+        <div style="font-size:44px; margin-bottom:10px;">
+          🐾 Masz szczęście 😏
+        </div>
+
+        <img
+          src="https://media.giphy.com/media/l0HlQ7LRal8b1B2eA/giphy.gif"
+          alt="Happy Labrador"
+          style="max-width:320px; width:90%; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.2); margin:20px 0;"
+        />
+
+        <div style="font-size:20px;">
+          To teraz… zaraz przedyskutujemy co dalej ☕❤️
+        </div>
+      </div>
+    </div>
+  `;
+});
+
 
     setInterval(() => {
       const heart = document.createElement("div");
